@@ -1,0 +1,60 @@
+User-agent: *
+Allow: /
+
+# السماح لجميع محركات البحث
+Allow: /jobs
+Allow: /projects
+Allow: /forum
+Allow: /stores
+Allow: /about
+Allow: /contact
+Allow: /privacy
+
+# منع الوصول للمجلدات الإدارية
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /uploads/temp/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /logs/
+
+# السماح بالوصول للملفات المهمة
+Allow: /uploads/images/
+Allow: /css/
+Allow: /js/
+Allow: /manifest.json
+Allow: /sw.js
+
+# خريطة الموقع
+Sitemap: https://amlhabrak.online/sitemap.xml
+Sitemap: https://amlhabrak.online/sitemap-jobs.xml
+Sitemap: https://amlhabrak.online/sitemap-projects.xml
+Sitemap: https://amlhabrak.online/sitemap-forum.xml
+
+# معدل الزحف (اختياري)
+Crawl-delay: 1
+
+# محركات بحث محددة
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# منع البوتات الضارة
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+

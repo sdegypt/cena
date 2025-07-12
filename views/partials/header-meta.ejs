@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="DYJRfaCRv2A7svif6_JoSm2FKoJXmsi5JvRkcrHzt1E" />
+  
+  <!-- تضمين علامات الميتا الديناميكية -->
+  <%- include('dynamic-meta') %>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/images/icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/images/icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/images/icon-192x192.png" />
+  <link rel="shortcut icon" href="/favicon/logo.png" />
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FF8C00" />
+  <meta name="msapplication-TileColor" content="#FF8C00" />
+  <meta name="msapplication-TileImage" content="/uploads/images/icon-144x144.png" />
+  
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="DIY" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://amlhabrak.online/uploads/images/icon-512x512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="شعار أمل حبرك" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@amlhabrak" />
+  <meta name="twitter:image" content="https://amlhabrak.online/uploads/images/icon-512x512.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://amlhabrak.online<%= typeof currentPath !== 'undefined' ? currentPath : '' %>" />
+  
+  <!-- Alternate Languages -->
+  <link rel="alternate" hreflang="ar" href="https://amlhabrak.online<%= typeof currentPath !== 'undefined' ? currentPath : '' %>" />
+  <link rel="alternate" hreflang="x-default" href="https://amlhabrak.online<%= typeof currentPath !== 'undefined' ? currentPath : '' %>" />
+  
+  <!-- Robots Meta -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="أمل حبرك" />
+  <meta name="publisher" content="أمل حبرك" />
+  <meta name="copyright" content="© 2025 أمل حبرك. جميع الحقوق محفوظة." />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
+  <meta name="revisit-after" content="1 days" />
+  
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DIY",
+    "url": "https://amlhabrak.online",
+    "logo": "https://amlhabrak.online/uploads/images/icon-512x512.png",
+    "description": "منصة شاملة للمشاريع والوظائف والتواصل المهني للمبدعين والحرفيين العرب",
+    "foundingDate": "2024",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://amlhabrak.online/contact"
+    },
+    "sameAs": [
+      "https://twitter.com/DIY",
+      "https://facebook.com/DIY",
+      "https://linkedin.com/company/DIY"
+    ]
+  }
+  </script>
+  
+  <!-- Structured Data - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DIY",
+    "url": "https://amlhabrak.online",
+    "description": "منصة شاملة للمشاريع والوظائف والتواصل المهني للمبدعين والحرفيين العرب",
+    "inLanguage": "ar",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://amlhabrak.online/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DIY",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://amlhabrak.online/uploads/images/icon-512x512.png"
+      }
+    }
+  }
+  </script>
+  
+  <!-- Structured Data - BreadcrumbList (if applicable) -->
+  <% if (typeof breadcrumbs !== 'undefined' && breadcrumbs.length > 0) { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      <% breadcrumbs.forEach((crumb, index) => { %>
+      {
+        "@type": "ListItem",
+        "position": <%= index + 1 %>,
+        "name": "<%= crumb.name %>",
+        "item": "https://amlhabrak.online<%= crumb.url %>"
+      }<%= index < breadcrumbs.length - 1 ? ',' : '' %>
+      <% }); %>
+    ]
+  }
+  </script>
+  <% } %>
+  
+  <!-- تحسين الأداء: تحميل Google Fonts و FontAwesome مع تأخير -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Critical CSS inline (يجب إضافة CSS الحرج هنا) -->
+  <style>
+    /* CSS حرج للتحميل السريع */
+    body { font-family: 'Cairo', 'Tajawal', Arial, sans-serif; margin: 0; padding: 0; }
+    .loading { display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #6c5ce7; border-radius: 50%; width: 40px; height: 40px; animation: spin 2s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+  
+  <!-- تحميل الخطوط مع تحسين الأداء -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" /></noscript>
+  
+  <!-- FontAwesome مع تحسين الأداء -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  
+  <!-- SweetAlert2 مع تحسين الأداء -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'" />
+  
+  <!-- ملفات CSS الرئيسية -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+  <link rel="stylesheet" href="/css/accessibility.css" />
+  <link rel="stylesheet" href="/css/progressive-images.css" />
+  <link rel="stylesheet" href="/css/performance-optimizations.css" />
+  
+  <!-- تحسينات الأداء والأخطاء -->
+  <script src="/js/error-handler.js" defer></script>
+  <script src="/js/performance-optimizer.js" defer></script>
+  <script src="/js/image-optimizer.js" defer></script>
+  <script src="/js/keyboard-navigation.js" defer></script>
+  <script src="/js/aria-support.js" defer></script>
+  <script src="/js/progressive-images.js" defer></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register("/service-worker.js")
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+  
+  <!-- Google Analytics المحسن -->
+  <%- include('google-analytics') %>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X88DTB0JB8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X88DTB0JB8', {
+      page_title: document.title,
+      page_location: window.location.href,
+      content_group1: '<%= typeof pageCategory !== "undefined" ? pageCategory : "general" %>'
+    });
+  </script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2350758257463070" crossorigin="anonymous"></script>
+  
+  <!-- إضافة ARIA landmarks والتحسينات -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // إضافة ARIA landmarks للعناصر الرئيسية
+      const header = document.querySelector('header');
+      if (header) header.setAttribute('role', 'banner');
+      
+      const nav = document.querySelector('nav');
+      if (nav) nav.setAttribute('role', 'navigation');
+      
+      const main = document.querySelector('main');
+      if (!main) {
+        const content = document.querySelector('.container, .content, #content');
+        if (content) {
+          const mainElement = document.createElement('main');
+          mainElement.setAttribute('role', 'main');
+          
+          while (content.firstChild) {
+            mainElement.appendChild(content.firstChild);
+          }
+          
+          content.appendChild(mainElement);
+        }
+      } else {
+        main.setAttribute('role', 'main');
+      }
+      
+      const footer = document.querySelector('footer');
+      if (footer) footer.setAttribute('role', 'contentinfo');
+      
+      // تحسين إمكانية الوصول للروابط
+      const iconLinks = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+      iconLinks.forEach(link => {
+        if (!link.textContent.trim() && link.querySelector('i, .icon, .fa, .fas, .fab, .far')) {
+          let label = '';
+          
+          if (link.classList.contains('search') || link.querySelector('.fa-search')) {
+            label = 'بحث';
+          } else if (link.classList.contains('user') || link.querySelector('.fa-user')) {
+            label = 'الملف الشخصي';
+          } else if (link.classList.contains('home') || link.querySelector('.fa-home')) {
+            label = 'الصفحة الرئيسية';
+          } else if (link.classList.contains('bell') || link.querySelector('.fa-bell')) {
+            label = 'الإشعارات';
+          } else if (link.classList.contains('envelope') || link.querySelector('.fa-envelope')) {
+            label = 'الرسائل';
+          } else if (link.classList.contains('cog') || link.querySelector('.fa-cog')) {
+            label = 'الإعدادات';
+          } else {
+            label = link.getAttribute('href') || 'رابط';
+          }
+          
+          link.setAttribute('aria-label', label);
+        }
+      });
+      
+      // إضافة skip links للتنقل السريع
+      if (!document.querySelector('.skip-links')) {
+        const skipLinks = document.createElement('div');
+        skipLinks.className = 'skip-links';
+        skipLinks.innerHTML = `
+          <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+          <a href="#navigation" class="skip-link">تخطي إلى التنقل</a>
+        `;
+        document.body.insertBefore(skipLinks, document.body.firstChild);
+      }
+    });
+  </script>
+  
+  <!-- تحسين Core Web Vitals -->
+  <script>
+    // تحسين LCP (Largest Contentful Paint)
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+      }
+    });
+    observer.observe({entryTypes: ['largest-contentful-paint']});
+    
+    // تحسين CLS (Cumulative Layout Shift)
+    let clsValue = 0;
+    let clsEntries = [];
+    
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          clsEntries.push(entry);
+        }
+      }
+    });
+    clsObserver.observe({entryTypes: ['layout-shift']});
+  </script>
+</head>
+
