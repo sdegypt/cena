@@ -3,7 +3,7 @@ const NotificationModel = require("../models/NotificationModel");
 const jwt = require("jsonwebtoken");
 
 class JobController {
-  static async addJob(req, res) {
+static async addJob(req, res) {
     try {
       const userId = req.user.id;
 
@@ -81,6 +81,7 @@ class JobController {
       res.status(500).json({ success: false, message: err.message || "حدث خطأ أثناء إضافة الوظيفة." });
     }
   }
+
 
   static async applyJob(req, res) {
     try {
